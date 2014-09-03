@@ -7,8 +7,8 @@ window.onload = function(){
   
   function add_mark(){
     this.innerHTML = turn;
-    this.setAttribute("data-player", turn);
-    this.determineWinner;
+    this.className="X";
+    // determineWinner;
   }
   
   function determineWinner(){
@@ -25,11 +25,13 @@ window.onload = function(){
   
             alert("WINNER");
      }                                              
-}  
+   }  
   
   for(var i = 0; i < squares.length; i++) {
     // When you click a square, runs the `add_mark` method.
     squares[i].addEventListener("click", add_mark);
   }
+  
+  determineWinner;
 
 }
