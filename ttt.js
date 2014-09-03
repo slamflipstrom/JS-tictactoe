@@ -7,8 +7,25 @@ window.onload = function(){
   
   function add_mark(){
     this.innerHTML = turn;
-    this.setAttribute("data-player","X")
+    this.setAttribute("data-player", turn);
+    this.determineWinner;
   }
+  
+  function determineWinner(){
+    var array = document.getElementsByTagName('td');
+    
+    if (array[0] == turn && array[1]  == turn && array[2] == turn|| 
+          array[3]  == turn && array[4]  == turn && array[5] == turn || 
+          array[6]  == turn && array[7]  == turn && array[8] == turn || 
+          array[0]  == turn && array[3]  == turn && array[6] == turn || 
+          array[1]  == turn && array[4]  == turn && array[7] == turn || 
+          array[2]  == turn && array[5]  == turn && array[8] == turn || 
+          array[0]  == turn && array[4]  == turn && array[8] == turn || 
+          array[2]  == turn && array[4]  == turn && array[6] == turn){ 
+  
+            alert("WINNER");
+     }                                              
+}  
   
   for(var i = 0; i < squares.length; i++) {
     // When you click a square, runs the `add_mark` method.
