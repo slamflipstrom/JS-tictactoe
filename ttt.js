@@ -8,10 +8,11 @@ window.onload = function(){
   function add_mark(){
     this.innerHTML = turn;
     this.className="X";
-    // determineWinner;
+    determineWinner();
   }
   
   function determineWinner(){
+    console.log("GGGGGGGGGG");
     var array = document.getElementsByTagName('td');
     
     if (array[0] == turn && array[1]  == turn && array[2] == turn|| 
@@ -32,6 +33,6 @@ window.onload = function(){
     squares[i].addEventListener("click", add_mark);
   }
   
-  determineWinner;
+  // determineWinner;
 
 }
